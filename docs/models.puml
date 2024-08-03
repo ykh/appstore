@@ -1,0 +1,36 @@
+@startuml
+entity "User" as user {
+    +UUID id
+    +EmailField email
+    +DecimalField credit
+    +DateTimeField updated_at
+}
+
+entity "App" as app {
+    +UUID id
+    +ForeignKey user
+    +CharField title
+    +TextField description
+    +DecimalField price
+    +ImageField icon
+    +BooleanField is_verified
+    +BooleanField is_activated
+    +DateTimeField created_at
+    +DateTimeField updated_at
+}
+
+entity "Purchase" as purchase {
+    +UUID id
+    +ForeignKey user
+    +ForeignKey app
+    +DecimalField cost
+    +URLField app_link
+    +DateTimeField purchased_at
+    +DateTimeField created_at
+    +DateTimeField updated_at
+}
+
+user "1" --o{ app : "owns"
+user "1" --o{ purchase : "makes"
+app "1" --o{ purchase : "is part of"
+@enduml
