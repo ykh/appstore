@@ -23,5 +23,5 @@ WORKDIR /appstore/src
 
 RUN poetry install --no-interaction --no-root --no-ansi
 
-CMD gunicorn --reload --log-level debug --bind 0.0.0.0:8000 appstore.wsgi:application
+CMD python manage.py runserver 0.0.0.0:8000
 
