@@ -12,6 +12,7 @@ djangorestframework = ">=3.15.2,<3.16"
 psycopg2-binary = ">=2.9.9, <2.10"
 djangorestframework-simplejwt = ">=5.3.1,<5.4"
 pillow = ">=10.4.0,<10.5"
+gunicorn = "^22.0.0"
 
 
 [build-system]
