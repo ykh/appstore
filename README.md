@@ -35,6 +35,22 @@ make help
 make tests_all v=2
 ```
 
+## Naming Conventions & Definitions
+
+```text
+SRL: Serializer > *_srl.py
+VLD: Validator > class AppsRepoCreateVLD(...
+TRF: Transformer > class UsersViewSignUpTRF(...
+Repo: Repository > *_repo.py , class AppsRepo:...
+SVC: Service > *_svc.py
+```
+
+- A Serializer can play the roles of a Validator or Transformer.
+- A Transformer is used for transforming given instance(s) to another schema.
+- A Validator is used for validating given data according to its fields.
+- A Service is used for maintaining the main logic of app.
+- A Repository is an ORM logic layer used for working with models.
+
 ## More Information
 
 ```shell
@@ -44,7 +60,8 @@ make help
 ## Documents
 
 - [Github Repository](https://github.com/ykh/appstore)
-- [Project Structure]()
 - [Project Management Board - Trello](https://trello.com/b/1qFsjJK5/appstore)
+- [Entities](https://miro.com/app/board/uXjVKuwiLaY=/?moveToWidget=3458764596234328217&cot=14)
+- [Project High-Level Design](https://miro.com/app/board/uXjVKuwiLaY=/?moveToWidget=3458764596248778412&cot=14)
+- [Appstore Low-Level Design](https://miro.com/app/board/uXjVKuwiLaY=/?moveToWidget=3458764596248142371&cot=14)
 - [API Doc - Postman](https://www.postman.com/develozerg/workspace/appstore-api/collection/2184809-f72fca16-b1ec-4e08-bba6-d59745b27aeb?action=share&creator=2184809)
-- [Dashboard Service Design]()
